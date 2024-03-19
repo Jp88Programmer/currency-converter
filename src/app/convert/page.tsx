@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Convert from "./convert/Convert";
+import Convert from "./Convert";
 
 const page = () => {
   return <Convert />;

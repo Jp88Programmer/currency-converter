@@ -1,0 +1,93 @@
+.main-layout-container {
+    @apply w-screen h-screen flex flex-col gap-20 items-center justify-center relative;
+}
+.main-heading {
+    @apply text-5xl text-white font-bold;
+}
+.curr-icon {
+    @apply absolute w-96 h-96 blur-2xl opacity-60 hover:filter-none hover:opacity-100 transition-all;
+}
+.usd-icon {
+    @apply top-0 left-0;
+}
+.usdc-icon {
+    @apply top-[420px] right-10;
+}
+.rupee-icon {
+    @apply top-8 right-10;
+}
+.euro-icon {
+    @apply top-[400px] left-0 -rotate-12;
+}
+.convert-main-container {
+    @apply p-14 border-blue-400 border-2 rounded-2xl w-512 flex flex-col gap-14;
+}
+.convert-from-price {
+    @apply flex justify-between gap-6;
+}
+.convert-from-input {
+    @apply w-full p-2 pb-0 outline-none text-white text-2xl font-bold bg-transparent border-b-2 border-gray-400 focus:border-blue-400;
+}
+.convert-layout {
+    @apply p-4 text-lg rounded-lg text-black font-bold;
+}
+.option-item {
+    @apply p-2;
+}
+.to-curr-code {
+    .react-select__control {
+        @apply z-[2] !important;
+    }
+    .react-select__menu {
+        @apply z-[1] !important;
+    }
+}
+.react-select-container {
+    @apply p-2 w-full flex justify-end;
+
+    .react-select__control {
+        @apply text-black px-2 py-2 font-semibold rounded-xl whitespace-nowrap text-2xl cursor-pointer w-72 relative z-[4];
+
+        .react-select__placeholder {
+            @apply text-black;
+        }
+
+        .react-select__single-value {
+            @apply text-black;
+        }
+
+        .react-select__indicator-separator {
+            @apply w-0;
+        }
+
+        .react-select__indicator {
+            svg {
+                @apply w-8 h-8;
+            }
+
+            path {
+                @apply fill-blue-400
+            }
+        }
+    }
+
+    .react-select__menu {
+        @apply text-black font-semibold rounded-xl text-2xl mt-[-24px] z-[3] w-72;
+
+        .react-select__menu-list {
+            @apply pt-7
+        }
+
+        .react-select__option {
+            @apply text-black p-4 font-semibold text-2xl
+        }
+
+        .react-select__option--is-focused {
+            @apply rounded-xl bg-blue-400;
+        }
+
+        .react-select__option--is-selected {
+            @apply rounded-xl bg-transparent;
+        }
+    }
+}
