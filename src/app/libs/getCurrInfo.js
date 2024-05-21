@@ -1,5 +1,5 @@
 import currencyapi from "@everapi/currencyapi-js";
-const API_KEY = "YOUR_API_KEY";
+const API_KEY = process.env.API_KEY;
 
 const getCurrencyCode = async () => {
   const currRes = new currencyapi(API_KEY);
