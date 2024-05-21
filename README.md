@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Currency Converter Application
 
-## Getting Started
+## Overview
+The Currency Converter application allows users to convert the price of any currency to another in real-time. Users can select the source and destination currencies, enter an amount, and see the converted value instantly. The application ensures that changes in either the source or destination currency fields are reflected immediately, thanks to real-time data fetching and debouncing functionality.
 
-First, run the development server:
+## Features
+- Convert any currency to another currency in real-time.
+- Select currencies from a dropdown menu.
+- Automatic update of converted value when the input amount or selected currencies change.
+- Debouncing to optimize performance and reduce unnecessary API calls.
 
-```bash
+## Preview 
+![image](https://github.com/Jp88Programmer/currency-converter/assets/88284160/fe725048-0f14-4462-844c-49bfaa047331)
+
+## Tech Stack
+- Next.js: Framework for server-rendered React applications.
+- Tailwind CSS: Utility-first CSS framework for styling.
+- currencyapi.js: API to fetch real-time currency conversion rates.
+
+## Installation
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn package manager
+
+### Steps
+
+1. Clone the repository
+
+```
+git clone https://github.com/Jp88Programmer/currency-converter.git
+cd currency-converter
+```
+
+2.Install dependencies
+
+```
+npm install
+# or
+yarn install
+```
+
+3.Set up the environment variables
+Create a .env file in the root directory and add your Currency API key:
+get API key  [API_KEY](https://currencyapi.com/docs/examples/currency-converter-javascript) 
+
+```
+API_KEY=your_currency_api_key
+```
+Run the application
+```
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser
+Navigate to http://localhost:3000 to see the application in action.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
+1.Enter the amount in the source currency field.
+2.Select the source currency from the dropdown menu.
+3;Select the destination currency from the dropdown menu.
+4.The converted amount will automatically appear in the destination currency field.
+5.If the destination amount is edited, the source amount will update accordingly.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contribution
+Contributions are welcome! Please follow these steps:
 
-## Learn More
+1. Fork the repository
 
-To learn more about Next.js, take a look at the following resources:
+2. Create a new branch
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+git checkout -b feature/your-feature-name
+```
+3. Make your changes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. Commit your changes
+```
+git commit -m 'Add some feature'
+```
+5. Push to the branch
+```
+git push origin feature/your-feature-name
+```
 
-## Deploy on Vercel
+6.Open a pull request
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact
+For any questions or feedback, please open an issue on GitHub.
